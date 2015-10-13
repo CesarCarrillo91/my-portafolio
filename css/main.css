@@ -1,0 +1,294 @@
+body {
+	font-family: Roboto;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #747704;
+}
+
+header,
+footer,
+article,
+section,
+div {
+  box-sizing: border-box;
+}
+
+figure {
+	height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+figcaption {
+	font-size: 2em;
+	font-weight: lighter;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+}
+
+main section {
+	padding: 16px 0;
+}
+
+a {
+	padding: 1em;
+	text-decoration: underline;
+	color: #747704;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+/* The Good Fonts Class Techinque */
+
+p {
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+/* Frequently-used classes */
+
+.content {
+	padding: 0 1em;
+}
+
+.flex {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+	border-bottom: 3px solid #bcb;
+}
+
+.header-logo {
+	min-width: 72px;
+	width: 25%;
+}
+
+.header-title {
+	width: 75%;
+	font-size: 3em;
+	font-weight: lighter;
+	text-align: right;
+}
+
+.header-title:after {
+  content: 'Front-End Developer';
+  display: block;
+  font-size: 0.4em;
+  text-transform: uppercase;
+}
+
+/*
+ *
+ * Top Main Section
+ *		 - Hero
+ */
+
+.hero {
+	height: 380px;
+}
+
+.hero img {
+	height: 100%;
+}
+
+/*
+ *
+ * Middle Main Section
+ *		- Featured Work
+ */
+.middle-main-title {
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+	font-size: 2.25em;
+	font-weight: 400;
+	color: #bcbbbb;
+}
+
+.projects {
+	
+}
+
+/* Affects all inmediate div childs */
+.projects > div {
+	width: calc( (100% / 3) - (20px / 3) );
+	border: 1px solid #bcbbbb;
+	margin-right: 10px;
+	padding: 10px;
+}
+
+
+.projects > div:last-of-type {
+	margin: 0;
+}
+
+.projects > div figure {
+	min-height: 300px;
+}
+
+.projects > div figure img {
+	height: 220px;
+}
+
+.view-project {
+	font-size: 14px;
+	float: right;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+.footer {
+	height: 80px;
+	border-top: 3px solid #bcbbbb;
+}
+
+.footer-copyright {
+	width: 50%;
+	padding: 15px;
+}
+
+.footer-copyright > p {
+	margin: 0;
+}
+
+.footer-social-media {
+	width: 50%;
+	text-align: right;
+}
+
+.footer-social-media ul {
+	padding: 0;
+}
+
+.footer-social-media ul li {
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.footer-social-media ul li:last-of-type {
+	margin-right: 0;
+}
+
+.footer-social-media ul li a {
+	text-decoration: none;
+	color: inherit;
+	padding: 16px;
+}
+
+/*
+ *
+ * Zocial Icons from http://weloveiconfonts.com/
+ *
+ */
+
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+.zocial-facebook:hover {
+	color: #3b5998;
+}
+
+.zocial-twitter:hover {
+	color: #5ea9dd;
+}
+
+.zocial-linkedin:hover {
+	color: #0077b5;
+}
+
+.zocial-googleplus:hover {
+	color: #e94638;
+}
+
+/*
+ *
+ * Media Queries
+ *
+ */
+
+@media screen and (max-width: 550px) {
+	.content {
+		padding: 0 0.5em;
+	}
+
+	.hero {
+		height: 150px;
+	}
+
+	.header-logo {
+		min-width: 32px;
+		height: 72px;
+		margin: 10px 0;
+	}
+
+	.header-title {
+		font-size: 2em;
+	}
+
+	.middle-main-title {
+		font-size: 1.5em;
+	}
+
+	.projects > div {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.projects > div figure img {
+		height: 300px;
+	}
+
+	.footer-copyright {
+		width: 100%;
+		order: 1;
+	}
+
+	.footer-social-media {
+		width: 100%;
+		order: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 551px) and (max-width: 900px) {
+	.hero {
+		height: 250px;
+	}
+
+	.projects > div {
+		width: calc(50% - 5px);
+		margin: 0 10px 10px 0;
+	}
+
+	.projects > div:nth-child(n+2) {
+		margin: 0 0 10px 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.content {
+		width: 1024px;
+		margin: 0 auto;
+	}
+}
